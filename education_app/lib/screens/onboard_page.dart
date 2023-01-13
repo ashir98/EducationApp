@@ -1,3 +1,4 @@
+import 'package:education_app/screens/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -82,7 +83,7 @@ class OnboardPage extends StatelessWidget {
                         ),
                         backgroundColor: Colors.deepPurple),
                       child: Text("Get started",style: TextStyle(fontSize: 17),),
-                      onPressed: () {},
+                      onPressed:() => Navigator.push(context, MaterialPageRoute(builder:(context) => HomePage(),)),
                     ),
                   )
                 ],
