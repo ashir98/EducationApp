@@ -1,5 +1,6 @@
 import 'package:education_app/model/category_model.dart';
 import 'package:education_app/model/course_model.dart';
+import 'package:education_app/screens/course_detail_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -96,15 +97,24 @@ class HomePage extends StatelessWidget {
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2, childAspectRatio: 1),
                 itemCount: courseModel.courses.length,
                 itemBuilder: (context, index) {
-                  return Card(
-                    child: Center(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image.asset(courseModel.courses[index][1],scale: 0.5,width: 80,height: 80,),
-                          Text(courseModel.courses[index][0], style: TextStyle(fontSize: 20),)
-          
-                        ],
+                  return GestureDetector(
+                    onTap: () => Navigator.push(context, MaterialPageRoute(builder:(context) => CourseDetail(
+                      courseName: courseModel.courses[index][0],
+                      image: courseModel.courses[index][1],
+                      courseVideos: courseModel.courses[index][2],
+                    ),)),
+                    child: Card(
+                      child: Center(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center ,
+                          children: [
+                            Image.asset(courseModel.courses[index][1],scale: 0.5,width: 80,height: 80,),
+                            SizedBox(height: 10,),
+                            Text(courseModel.courses[index][0], style: TextStyle(fontSize: 20),),
+                            Text(courseModel.courses[index][2], style: TextStyle(color: Colors.grey),)
+                            
+                          ],
+                        ),
                       ),
                     ),
                   );
