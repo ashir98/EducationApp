@@ -15,11 +15,11 @@ class VideosSection extends StatelessWidget {
 
         return ListTile(
           leading: Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Colors.deepPurple,
               shape: BoxShape.circle
             ),
-            child: Icon(Icons.play_arrow_rounded, color: Colors.white,size: 30,),
+            child: const Icon(Icons.play_arrow_rounded, color: Colors.white,size: 30,),
           ),
 
           title: Text("Course video "+index.toString()),

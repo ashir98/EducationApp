@@ -42,25 +42,25 @@ class _CourseDetailState extends State<CourseDetail> {
                 ),
                 child: Center(
                   child: Container(
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Colors.white,
                       shape: BoxShape.circle
                     ),
-                    child: Icon(Icons.play_arrow_rounded, size: 50,color: Colors.deepPurple,)
+                    child: const Icon(Icons.play_arrow_rounded, size: 50,color: Colors.deepPurple,)
                   ),
                 )
               ),
             ),
 
-            SizedBox(height: 10 ,),
-            Text(widget.courseName+" Complete Course", style: TextStyle(fontSize: 25,fontWeight: FontWeight.w500),),
-            SizedBox(height: 5,),
+            const SizedBox(height: 10 ,),
+            Text(widget.courseName+" Complete Course", style: const TextStyle(fontSize: 25,fontWeight: FontWeight.w500),),
+            const SizedBox(height: 5,),
             Text("Created by Syed Ashir Ali", style: TextStyle(fontSize: 15, color: Colors.black.withOpacity(0.7)),),
             Text(widget.courseVideos, style: TextStyle(color: Colors.black.withOpacity(0.5),fontSize: 15),),
 
 
             Padding(
-              padding: EdgeInsets.only(top: 15),
+              padding: const EdgeInsets.only(top: 15),
               child: Container(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -78,10 +78,10 @@ class _CourseDetailState extends State<CourseDetail> {
                           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
                           backgroundColor: isSwitched? Colors.deepPurple: Colors.deepPurple.shade100
                         ),
-                        child: Text("Videos",style: TextStyle(color: Colors.white,fontSize: 15),),
+                        child: Text("Playlist ""(${widget.courseVideos.trimRight()})",style: const TextStyle(color: Colors.white,fontSize: 15),),
                       ),
                     ),
-                    SizedBox(width: 10,),
+                    const SizedBox(width: 10,),
                     SizedBox(
                       height: 50,
                       width: 150,
@@ -95,7 +95,7 @@ class _CourseDetailState extends State<CourseDetail> {
                           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
                           backgroundColor: isSwitched? Colors.deepPurple.shade100: Colors.deepPurple
                         ),
-                        child: Text("Description",style: TextStyle(color: Colors.white,fontSize: 15),),
+                        child: const Text("Description",style: TextStyle(color: Colors.white,fontSize: 15),),
                       ),
                     )
                   ],
@@ -106,7 +106,7 @@ class _CourseDetailState extends State<CourseDetail> {
 
 
             SingleChildScrollView(
-              child: isSwitched?VideosSection(): DescriptionSection(),
+              child: isSwitched?const VideosSection(): const DescriptionSection(),
             )
 
 

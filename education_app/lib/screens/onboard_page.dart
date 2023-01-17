@@ -18,12 +18,12 @@ class OnboardPage extends StatelessWidget {
               Container(
                 width: double.infinity,
                 height: height / 1.7,
-                decoration: BoxDecoration(color: Colors.white),
+                decoration: const BoxDecoration(color: Colors.white),
               ),
               Container(
                 height: height / 1.7,
                 width: double.infinity,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     color: Colors.deepPurple,
                     borderRadius: BorderRadius.only(
                       bottomRight: Radius.circular(100),
@@ -39,7 +39,7 @@ class OnboardPage extends StatelessWidget {
             child: Container(
               width: double.infinity,
               height: height / 2.425,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Colors.deepPurple,
               ),
             ),
@@ -49,28 +49,28 @@ class OnboardPage extends StatelessWidget {
             child: Container(
               height: height / 2.425,
               width: double.infinity,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   color: Colors.white,
                   borderRadius:
                       BorderRadius.only(topLeft: Radius.circular(100))),
               child: Column(
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     height: 60,
                   ),
-                  Text(
+                  const Text(
                     "Learning is Everything",
                     style: TextStyle(fontSize: 30, fontWeight: FontWeight.w500),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 40),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 40),
                     child: Text(
                         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet leo non quam dictum iaculis."),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 40,
                   ),
                   Container(
@@ -78,12 +78,12 @@ class OnboardPage extends StatelessWidget {
                     width: width / 2,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        shape: RoundedRectangleBorder(
+                        shape: const RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(Radius.circular(20))
                         ),
                         backgroundColor: Colors.deepPurple),
-                      child: Text("Get started",style: TextStyle(fontSize: 17),),
-                      onPressed:() => Navigator.push(context, MaterialPageRoute(builder:(context) => HomePage(),)),
+                      child: const Text("Get started",style: TextStyle(fontSize: 18, color: Colors.white),),
+                      onPressed:() => Navigator.push(context, MaterialPageRoute(builder:(context) => const HomePage(),)),
                     ),
                   )
                 ],
