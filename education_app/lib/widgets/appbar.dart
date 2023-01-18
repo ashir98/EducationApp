@@ -14,7 +14,7 @@ class MyAppBar extends StatelessWidget {
         gradient: LinearGradient(
           
           colors: [
-            Colors.deepPurple.shade400,
+            Colors.deepPurple.shade400.withOpacity(0.95),
             Colors.deepPurple,
             
 

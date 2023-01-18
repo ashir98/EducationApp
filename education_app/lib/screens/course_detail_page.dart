@@ -7,7 +7,7 @@ import 'package:flutter/src/widgets/framework.dart';
 
 class CourseDetail extends StatefulWidget {
   String courseName, image, courseVideos;
-  CourseDetail({required this.courseName, required this.image, required this.courseVideos, super.key});
+  CourseDetail({required this.courseName , required this.image, required this.courseVideos, super.key});
 
   @override
   State<CourseDetail> createState() => _CourseDetailState();
@@ -78,7 +78,7 @@ class _CourseDetailState extends State<CourseDetail> {
                           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
                           backgroundColor: isSwitched? Colors.deepPurple: Colors.deepPurple.shade100
                         ),
-                        child: Text("Playlist ""(${widget.courseVideos.trimRight()})",style: const TextStyle(color: Colors.white,fontSize: 15),),
+                        child: Text("Playlist ""(${widget.courseVideos})",style: const TextStyle(color: Colors.white,fontSize: 15),),
                       ),
                     ),
                     const SizedBox(width: 10,),

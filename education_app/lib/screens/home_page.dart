@@ -76,36 +76,39 @@ class HomePage extends StatelessWidget {
           
           
               ///courses tile
-              GridView.builder(
-                shrinkWrap: true,
-                physics: const NeverScrollableScrollPhysics(),
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2, childAspectRatio: 0.9),
-                itemCount: courseModel.courses.length,
-                itemBuilder: (context, index) {
-                  return GestureDetector(
-                    onTap: () => Navigator.push(context, MaterialPageRoute(builder:(context) => CourseDetail(
-                      courseName: courseModel.courses[index][0],
-                      image: courseModel.courses[index][1],
-                      courseVideos: courseModel.courses[index][2],
-                    ),)),
-                    child: Card(
-                      color: Colors.purple.withOpacity(0.05),
-                      shadowColor: Colors.transparent,
-                      child: Center(
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center ,
-                          children: [
-                            Image.asset(courseModel.courses[index][1],scale: 0.5,width: 80,height: 80,),
-                            const SizedBox(height: 10,),
-                            Text(courseModel.courses[index][0], style: const TextStyle(fontSize: 20),),
-                            Text(courseModel.courses[index][2], style: const TextStyle(color: Colors.grey),)
-                            
-                          ],
+              Padding(
+                padding: const EdgeInsets.all(5),
+                child: GridView.builder(
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics(),
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2, childAspectRatio: 0.9),
+                  itemCount: courseModel.courses.length,
+                  itemBuilder: (context, index) {
+                    return GestureDetector(
+                      onTap: () => Navigator.push(context, MaterialPageRoute(builder:(context) => CourseDetail(
+                        courseName: courseModel.courses[index][0],
+                        image: courseModel.courses[index][1],
+                        courseVideos: courseModel.courses[index][2],
+                      ),)),
+                      child: Card(
+                        color: Colors.purple.withOpacity(0.05),
+                        shadowColor: Colors.transparent,
+                        child: Center(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center ,
+                            children: [
+                              Image.asset(courseModel.courses[index][1],scale: 0.5,width: 80,height: 80,),
+                              const SizedBox(height: 10,),
+                              Text(courseModel.courses[index][0], style: const TextStyle(fontSize: 20),),
+                              Text(courseModel.courses[index][2], style: const TextStyle(color: Colors.grey),)
+                              
+                            ],
+                          ),
                         ),
                       ),
-                    ),
-                  );
-                },
+                    );
+                  },
+                ),
               )
             ],
           ),
