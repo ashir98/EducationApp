@@ -8,25 +8,27 @@ class VideosSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      shrinkWrap: true,
-      itemCount: 20,
-      itemBuilder: (context, index) {
-
-        return ListTile(
-          leading: Container(
-            decoration: const BoxDecoration(
-              color: Colors.deepPurple,
-              shape: BoxShape.circle
+    return Container(
+      height: 320,
+      child: ListView.builder(
+        shrinkWrap: true,
+        itemCount: 20,
+        itemBuilder: (context, index) {
+          return ListTile(
+            leading: Container(
+              decoration: const BoxDecoration(
+                color: Colors.deepPurple,
+                shape: BoxShape.circle
+              ),
+              child: const Icon(Icons.play_arrow_rounded, color: Colors.white,size: 30,),
             ),
-            child: const Icon(Icons.play_arrow_rounded, color: Colors.white,size: 30,),
-          ),
 
-          title: Text("Course video "+index.toString()),
-          subtitle: Text("video duration"+ index.toString()),
-        );
-        
-      },
+            title: Text("Course video "+index.toString()),
+            subtitle: Text("video duration"+ index.toString()),
+          );
+          
+        },
+      ),
     );
   }
 }

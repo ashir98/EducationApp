@@ -17,7 +17,10 @@ class EducationApp extends StatelessWidget {
       theme: ThemeData(
         
         useMaterial3: true,
-        textTheme: GoogleFonts.nunitoSansTextTheme()
+        textTheme: GoogleFonts.nunitoSansTextTheme(),
+        navigationBarTheme: NavigationBarThemeData(
+          indicatorColor: Colors.deepPurple.shade400,
+        )
         
       ),
       debugShowCheckedModeBanner: false,

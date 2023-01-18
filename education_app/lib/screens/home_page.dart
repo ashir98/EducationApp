@@ -18,6 +18,34 @@ class HomePage extends StatelessWidget {
         preferredSize: Size(double.infinity, 220),
         child: MyAppBar(),
       ),
+
+      bottomNavigationBar: NavigationBar(
+        surfaceTintColor: Colors.deepPurple.shade400,
+        
+        selectedIndex: 0,
+        destinations: [
+          NavigationDestination(
+            icon: Icon(Icons.home_rounded),
+            label: "Home",
+          ),
+
+          NavigationDestination(
+            icon: Icon(Icons.assignment),
+            label: "Courses",
+          ),
+
+          NavigationDestination(
+            icon: Icon(Icons.favorite),
+            label: "Favourites",
+          ),
+
+          NavigationDestination(
+            
+            icon: Icon(Icons.person),
+            label: "Account",
+          )
+        ],
+      ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
